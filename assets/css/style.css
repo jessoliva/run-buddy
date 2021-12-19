@@ -74,7 +74,7 @@ section {
   padding: 60px;
 }
 
-/* Hero Styles Start */
+/* HERO STYLES START */
 .hero {
   background-image: url("../images/hero-bg.jpg");
   height: 600px;
@@ -125,9 +125,9 @@ section {
   padding: 10px 20px;
   border: none; /* this removes the default border the button comes w */
 }
-/* Hero Style End */
+/* HERO STYLES END */
 
-/* What We Do Style Start */
+/* WHAT WE DO STYLES START */
 .intro {
   text-align: center;
 }
@@ -139,9 +139,9 @@ section {
   font-size: 20px;
   margin: 0 auto; /* centers a block element with a width less than 100% */
 }
-/* What We Do Style End */
+/* WHAT WE DO STYLES END */
 
-/* What You Do Style Start */
+/* WHAT YOU DO STYLES  START */
 .steps {
   text-align: center; /* this also centered the svg images */
   background: #fce138;
@@ -170,7 +170,7 @@ section {
 .steps span {
   font-size: 38px;
 }
-/* What You Do Style End */
+/* WHAT YOU DO STYLES END */
 
 /* Style Repeated For what-we-do what-you-do meet-the-trainers reach-out titles START */
 .section-title {
@@ -191,7 +191,7 @@ section {
 }
 /* Style Repeated For what-we-do what-you-do meet-the-trainers reach-out titles END */
 
-/* Meet The Trainers Style Start */
+/* MEET THE TRAINERS STYLE START */
 .trainers {
   text-align: center;
 }
@@ -238,9 +238,9 @@ section {
 .text-right { /* it's good to keep class names generic to be used wherever */
   text-align: right;
 }
-/* Meet The Trainers Style End */
+/* MEET THE TRAINERS STYLES END */
 
-/* Reach Out Style Start */
+/* REACH OUT STYLES START */
 .contact {
   text-align: center;
   background-color: #024e76;
@@ -251,7 +251,7 @@ section {
 }
 
 /* included the class of the parent just to be more specific --> bc if you just used .iframe and added another .iframe to the html then that one would be affected too */
-.contact-info .iframe { 
+.contact-info iframe { 
   width: 400px;
   height: 400px;
 }
@@ -265,4 +265,19 @@ section {
   color: white;
 }
 
-/* Reach Out Style End */
+.address-info h3 { /* module has .contact-info h3 */
+  font-size: 32px;
+  color: #fce138;
+}
+
+.address-info p, .address-info address { /* use a comma to separate the two class element combos */
+  font-size: 20px;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 20px 0; /* margin for top and bottom + left and right */
+}
+
+.address-info a {
+  color: #fce138;
+}
+/* REACH OUT STYLES END */
