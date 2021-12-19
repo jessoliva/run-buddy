@@ -241,6 +241,28 @@ section {
 /* Meet The Trainers Style End */
 
 /* Reach Out Style Start */
+.contact {
+  text-align: center;
+  background-color: #024e76;
+}
 
+.contact h2 {
+  color: #fce138;
+}
+
+/* included the class of the parent just to be more specific --> bc if you just used .iframe and added another .iframe to the html then that one would be affected too */
+.contact-info .iframe { 
+  width: 400px;
+  height: 400px;
+}
+
+.contact-info div { /* this changes the things for div w address-info */
+  width: 410px;
+  display: inline-block; /* this makes the map and text be side by side!! a div is typically default block so we changed it. used inline-block instead of inline because inline-block allows us to add a width and inline doesn't */
+  vertical-align: top;
+  text-align: left;
+  margin: 30px 0 0 60px;
+  color: white;
+}
 
 /* Reach Out Style End */
