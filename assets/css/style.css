@@ -235,7 +235,8 @@ section {
   text-align: left;
 }
 
-.text-right { /* it's good to keep class names generic to be used wherever */
+.text-right {
+  /* it's good to keep class names generic to be used wherever */
   text-align: right;
 }
 /* MEET THE TRAINERS STYLES END */
@@ -251,12 +252,13 @@ section {
 }
 
 /* included the class of the parent just to be more specific --> bc if you just used .iframe and added another .iframe to the html then that one would be affected too */
-.contact-info iframe { 
+.contact-info iframe {
   width: 400px;
   height: 400px;
 }
 
-.contact-info div { /* this changes the things for div w address-info */
+.contact-info div {
+  /* this changes the things for div w address-info */
   width: 410px;
   display: inline-block; /* this makes the map and text be side by side!! a div is typically default block so we changed it. used inline-block instead of inline because inline-block allows us to add a width and inline doesn't */
   vertical-align: top;
@@ -265,12 +267,15 @@ section {
   color: white;
 }
 
-.address-info h3 { /* module has .contact-info h3 */
+.address-info h3 {
+  /* module has .contact-info h3 */
   font-size: 32px;
   color: #fce138;
 }
 
-.address-info p, .address-info address { /* use a comma to separate the two class element combos */
+.address-info p,
+.address-info address {
+  /* use a comma to separate the two class element combos */
   font-size: 20px;
   font-style: normal;
   line-height: 1.5;
