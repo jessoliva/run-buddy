@@ -11,6 +11,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
+/* HEADER STYLES START */
 /* apply styles to <header> */
 header {
   padding: 20px 35px;
@@ -45,6 +46,7 @@ header nav ul li a {
   font-weight: lighter;
   font-size: 22px;
 }
+/* HEADER STYLES END */
 
 footer {
   background-color: #fce138;
@@ -78,9 +80,9 @@ section {
 .hero {
   background-image: url("../images/hero-bg.jpg");
   height: 600px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  background-size: cover; /* styles hero background image size */
+  background-position: center; /* styles hero background image location, helps zoom out */
+  position: relative; /* moves element RELATIVE to its original position */
 }
 
 .hero-form {
@@ -89,7 +91,7 @@ section {
   padding: 20px;
   width: 500px;
   color: #024e76;
-  position: absolute;
+  position: absolute; /* element is positioned relative to its 1st positioned ancestor element, it is removed from the document flow */
   bottom: 120px;
   right: 140px;
 }
