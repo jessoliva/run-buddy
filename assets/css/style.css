@@ -54,6 +54,7 @@ header nav ul li a {
 }
 /* HEADER STYLES END */
 
+/* FOOTER STYLES START */
 footer {
   background-color: #fce138;
   width: 100%;
@@ -77,7 +78,9 @@ footer div {
 footer a {
   color: #024e76;
 }
+/* FOOTER STYLES END */
 
+/* STYLE ALL SECTION TAGS */
 /* this gives space around the form box and the h2 section headers */
 section {
   padding: 60px;
@@ -277,6 +280,76 @@ section {
 }
 /* MEET THE TRAINERS STYLES END */
 
+/* REACH OUT STYLES START */
+.contact {
+  background-color: #024e76;
+}
+
+.contact h2 {
+  color: #fce138;
+}
+
+/* included the class of the parent just to be more specific --> bc if you just used .iframe and added another .iframe to the html then that one would be affected too */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info > * { /* apply the preceding styles to the three flexbox child elements in the contact-info flexbox container instead of doing it for each 1 */
+  flex: 1; /* all children spaced out evenly */
+  margin: 15px;
+}
+
+.contact-info iframe {
+  height: 400px;
+}
+
+.contact-info div {
+  color: white;
+}
+
+.contact-info h3 {
+  /* module has .contact-info h3 */
+  font-size: 32px;
+  color: #fce138;
+}
+
+.contact-info p,
+.contact-info address {
+  /* use a comma to separate the two class element combos */
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 20px 0; /* margin for top and bottom + left and right */
+}
+
+.contact-form input, .contact-form textarea {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  width: 100%;
+  border: none;
+  background: #fce138;
+  color: #024e76;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.contact-info a {
+  color: #fce138;
+}
+/* REACH OUT STYLES END */
+
 /* UTILITY CLASSES STYLES START */
 .text-left {
   text-align: left;
@@ -291,48 +364,3 @@ section {
   display: flex; /* don't need flex-direction bc default is row */
 }
 /* UTILITY CLASSES STYLES END *?
-
-/* REACH OUT STYLES START */
-.contact {
-  background-color: #024e76;
-}
-
-.contact h2 {
-  color: #fce138;
-}
-
-/* included the class of the parent just to be more specific --> bc if you just used .iframe and added another .iframe to the html then that one would be affected too */
-.contact-info iframe {
-  width: 400px;
-  height: 400px;
-}
-
-.contact-info div {
-  /* this changes the things for div w address-info */
-  width: 410px;
-  display: inline-block; /* this makes the map and text be side by side!! a div is typically default block so we changed it. used inline-block instead of inline because inline-block allows us to add a width and inline doesn't */
-  vertical-align: top;
-  text-align: left;
-  margin: 30px 0 0 60px;
-  color: white;
-}
-
-.address-info h3 {
-  /* module has .contact-info h3 */
-  font-size: 32px;
-  color: #fce138;
-}
-
-.address-info p,
-.address-info address {
-  /* use a comma to separate the two class element combos */
-  font-size: 20px;
-  font-style: normal;
-  line-height: 1.5;
-  margin: 20px 0; /* margin for top and bottom + left and right */
-}
-
-.address-info a {
-  color: #fce138;
-}
-/* REACH OUT STYLES END */
