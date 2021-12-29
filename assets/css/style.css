@@ -39,14 +39,18 @@ header nav {
 }
 
 /* this makes the list under nav, be inline instead of a list */
-header nav ul li {
-  display: inline;
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none; /* removes markers bc it's a list */
 }
 
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 1.55vw;
 }
 /* HEADER STYLES END */
 
