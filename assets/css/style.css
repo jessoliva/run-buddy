@@ -152,22 +152,18 @@ section {
 /* HERO STYLES END */
 
 /* WHAT WE DO STYLES START */
-.intro {
-  text-align: center;
-}
-
 .intro p {
-  line-height: 1.7;
-  color: #39a6b2;
-  width: 80%; /* shrinks width of paragraph, and para. is not centered, just the text inside of it */
   font-size: 20px;
+  color: #39a6b2;
+  text-align: center;
+  line-height: 1.7;
+  width: 80%; /* shrinks width of paragraph, and para. is not centered, just the text inside of it */
   margin: 0 auto; /* centers a block element with a width less than 100% */
 }
 /* WHAT WE DO STYLES END */
 
 /* WHAT YOU DO STYLES  START */
 .steps {
-  text-align: center; /* this also centered the svg images */
   background: #fce138;
 }
 
@@ -196,14 +192,15 @@ section {
 }
 /* WHAT YOU DO STYLES END */
 
-/* Style Repeated For what-we-do what-you-do meet-the-trainers reach-out titles START */
+/* STYLES Repeated For what-we-do what-you-do meet-the-trainers reach-out titles START */
 .section-title {
   font-size: 55px;
+  text-align: center;
   color: #024e76;
-  padding: 0 100px 20px 100px;
-  display: inline-block; /* this makes the bottom border listen to the padding above */
+  padding-bottom: 20px;
   border-bottom: 3px solid;
-  margin-bottom: 35px;
+  margin: 0 auto 35px auto;
+  width: 50%; */ 50% of parent container (inside padding) */
 }
 
 .primary-border {
@@ -213,11 +210,10 @@ section {
 .secondary-border {
   border-color: #39a6b2;
 }
-/* Style Repeated For what-we-do what-you-do meet-the-trainers reach-out titles END */
+/* STYLES Repeated For what-we-do what-you-do meet-the-trainers reach-out titles END */
 
 /* MEET THE TRAINERS STYLE START */
 .trainers {
-  text-align: center;
 }
 
 .trainer {
@@ -254,7 +250,9 @@ section {
   font-size: 17px;
   line-height: 1.3;
 }
+/* MEET THE TRAINERS STYLES END */
 
+/* UTILITY CLASSES STYLES START */
 .text-left {
   text-align: left;
 }
@@ -263,11 +261,14 @@ section {
   /* it's good to keep class names generic to be used wherever */
   text-align: right;
 }
-/* MEET THE TRAINERS STYLES END */
+
+.flex-row {
+  display: flex; /* don't need flex-direction bc default is row */
+}
+/* UTILITY CLASSES STYLES END *?
 
 /* REACH OUT STYLES START */
 .contact {
-  text-align: center;
   background-color: #024e76;
 }
 
