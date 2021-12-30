@@ -1,3 +1,4 @@
+/* UNIVERSAL STYLES */
 * {
   margin: 0;
   padding: 0;
@@ -48,7 +49,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  margin: 0 30px;
+  padding: 10px 15px; /* changed from margin: 0 30px; to create a tighter navigation menu */
   font-weight: lighter;
   font-size: 1.55vw;
 }
@@ -93,8 +94,8 @@ section {
   background-position: center; /* styles hero background image location, helps zoom out */
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
+  align-items: flex-start; /* added in 2.3.5 */
 }
 
 .hero-cta {
@@ -103,7 +104,7 @@ section {
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.2; /* changed from 1.3 to make text easier to read */
 }
 
 .hero-cta h2 {
@@ -222,7 +223,7 @@ section {
 
 /* STYLES Repeated For what-we-do what-you-do meet-the-trainers reach-out titles START */
 .section-title {
-  font-size: 55px;
+  font-size: 48px; /* changed from 55px bc 48px is big enough for all screens and 55px would be cramped for mobile screen */
   text-align: center;
   color: #024e76;
   padding-bottom: 20px;
@@ -363,4 +364,10 @@ section {
 .flex-row {
   display: flex; /* don't need flex-direction bc default is row */
 }
-/* UTILITY CLASSES STYLES END *?
+/* UTILITY CLASSES STYLES END */
+
+/* MEDIA QUERIES START */
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+
+}
