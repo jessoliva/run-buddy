@@ -369,5 +369,103 @@ section {
 /* MEDIA QUERIES START */
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+  }
 
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+
+  footer h2, footer div { /* applied to both footer children */
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-cta, .hero-form {
+    width: 100%;
+  }
+  
+  .hero-cta { /* don't want to center form */
+    text-align: center;
+  }
+
+  .section-title {
+    width: 80%; /* makes them wider on smaller screens */
+  }
+  
+  .trainer {
+    flex: 0 70%; /* made cards just wide enough to be on their own row --> flex-grow is set to 0, it won't grow to take up unused space and will stay at the 70% we used for flex-basis */
+  }
+  
+  .contact-info iframe{
+    flex: 1 100%; /* to get google map to get its own row */
+  }
+}
+/* Because both the <header> and <footer> elements are flex containers, we only had to tell both of their children to be 100% of the width. Because flex-wrap is turned on to wrap overflowing content, it allows both children to get their own row one on top of the other. The only thing we need to do then is adjust their justification properties to center them on the page, and adjust some font sizes and spacing to tighten up the design. */
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
+  }
+
+  .step h3 {
+    flex: 1 100%; /* to give h3 its own row! 100% of parent */
+    text-align: center;
+  }
+
+  .step-info {
+    flex: 2 100%; /* .step-info will be at least 100% wide but will receive any xtra space container at a 2-to-1 ratio */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .step-img {
+    flex: 0 32%; /* We didn't want the icon to become the full width, however, because it would get too large. So we capped it at 32% width using flex-basis and told it not to take up any extra unused space by setting flex-grow to 0 */
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .step-text {
+    flex: 100%;  /* flex-basis */
+  }
+}
+
+@media screen and (max-width: 575px) {
+
+  .hero-form button {
+    width: 100%; /* make button 100% size of parent container */
+  }
+
+  .section-title {
+    width: 95%; /* inc size of section titles */
+  }
+  .intro p {
+    width: 100%; /* paragraph for what we do sxn takes full space of parent container */
+  }
+
+  .trainer {
+    flex: 0 100%; /* flex-grow = 0 = don't grow, flex-basis = 100% = trainer cards take up 100% of parent container */
+  }
+
+  .contact-info > * {
+    flex: 0 100%; /* don't grow, all children take up 100% of parent container */
+  }
+
+  .contact-form {
+    order: 3; /* to make it be the 3rd child down (changed the order of the children) */
+  }
 }
