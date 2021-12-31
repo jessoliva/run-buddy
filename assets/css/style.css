@@ -20,6 +20,7 @@ header {
   display: flex; /* default is row so no need to declare */
   justify-content: space-between;
   flex-wrap: wrap;
+  position: -webkit-sticky; /* used to target old versions of safari and chrome, added before the next style */
   position: sticky; /* this and top: 0 sticks header to the top and leaves it there as you scroll */
   top: 0;
   background-image: url("../images/hero-bg.jpg"); /* from here down, it's to make the header look like the hero!! */
