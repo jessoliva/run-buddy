@@ -20,14 +20,22 @@ header {
   display: flex; /* default is row so no need to declare */
   justify-content: space-between;
   flex-wrap: wrap;
+  position: sticky; /* this and top: 0 sticks header to the top and leaves it there as you scroll */
+  top: 0;
+  background-image: url("../images/hero-bg.jpg"); /* from here down, it's to make the header look like the hero!! */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* to place image relative to the viewport instead of the element, so theoretically, the image will look the same in every container if this is also used in that style */
+  background-position: 80%;
 }
 
 header h1 {
   font-weight: bold;
   font-size: 36px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* horizontal offset, vertical offset, radius/size of blur, sets color to black at half transparency */
   margin: 0;
-  display: inline;
+  display: inline;  
 }
 
 header a {
@@ -49,9 +57,17 @@ header nav ul {
 }
 
 header nav ul li a {
-  padding: 10px 15px; /* changed from margin: 0 30px; to create a tighter navigation menu */
   font-weight: lighter;
   font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px 15px; /* changed from margin: 0 30px; to create a tighter navigation menu */
+}
+
+header nav ul li a:hover { /* added in 2.4.6 */
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
 }
 /* HEADER STYLES END */
 
@@ -92,6 +108,8 @@ section {
   background-image: url("../images/hero-bg.jpg");
   background-size: cover; /* styles hero background image size */
   background-position: center; /* styles hero background image location, helps zoom out */
+  background-attachment: fixed;
+  background-position: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -111,15 +129,18 @@ section {
   font-style: italic;
   font-size: 55px;
   color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
+  color: #024e76;
   width: 40%;
   margin: 3.5%;
   border: 3px solid #024e76;
-  background-color: #fce138;
+  background-color: rgba(252, 225, 56, 0.8);/* #fce138; */
   padding: 20px;
-  color: #024e76;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -140,7 +161,14 @@ section {
   color: #024e76;
   width: 100%; /* this makes the white box be 100% width of the parent but also taking the content padding into consideration */
   margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
 }
+
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none; /* this removes extra outline if there is one */
+} /* this makes the form input's default state slightly transparent, then switches to full opaqueness when the input is in focus!! */
 
 .hero-form label {
   margin: 0 5px; /* adds space to the left of the labels */
@@ -152,6 +180,11 @@ section {
   background-color: #024e76;
   padding: 10px 20px;
   border: none; /* this removes the default border the button comes w */
+  border-radius: 10px;
+}
+
+.hero-form button:hover {
+  background-color: #39a6b2;  
 }
 /* HERO STYLES END */
 
@@ -175,12 +208,15 @@ section {
   margin: 50px auto; /* clears area outside the border and is transparent */
   padding-bottom: 50px; /* space btw content container and border */
   width: 80%; /* 80% of parent container size within margin*/
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
+
+.step:not(:last-child) { /* applies border to every child except last one!! but doesn't apply to h2 child bc the border style is styled after this section so that supersedes */
+  border-bottom: 1px solid #39a6b2;
+} /* 2.4.6 used this option because it's less code */
 
 .step h3 { /* child 1a */
   color: #024e76;
@@ -334,7 +370,14 @@ section {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.75);
 }
+
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
+} 
 
 .contact-form button {
   width: 100%;
@@ -344,6 +387,12 @@ section {
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
 }
 
 .contact-info a {
@@ -372,6 +421,7 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative; /* added to undo stickiness of the header for smaller screens */
   }
 
   header h1 {
@@ -468,4 +518,24 @@ section {
   .contact-form {
     order: 3; /* to make it be the 3rd child down (changed the order of the children) */
   }
+}
+
+/* default state */
+button {
+  background: white;
+}
+
+/* mouse is hovering over button */
+button:hover {
+  background: red;
+}
+
+/* button is in focus because it was the most recently clicked element on the page */
+button:focus {
+  background: green;
+}
+
+/* user is actively pressing the cursor down on the button */
+button:active {
+  background: blue;
 }
